@@ -1,0 +1,35 @@
+### RECUPERAR TODAS LAS PELICULAS
+GET http://localhost:1234/movies
+
+
+### RECUPERAR UNA PELICULA POR ID
+GET http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+
+### RECUPERAR TODAS LAS PELICULAS POR UN GENERO
+GET http://localhost:1234/movies?genre=ACTION
+
+### CREAR UNA PELÍCULA
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+    "title": "The Shawshank Redemption",
+    "year": 1994,
+    "director": "Frank Darabont",
+    "duration": 142,
+    "poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp",
+    "genre": [
+      "Crime"
+    ]
+}
+
+### ACTUALIZAR UNA PELÍCULA
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+  "title": "Transformer",
+  "year": 2011
+}
+
